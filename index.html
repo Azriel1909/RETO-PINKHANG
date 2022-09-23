@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PinkGames</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Our Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Mono:wght@400;500&family=Roboto+Mono:ital,wght@0,200;0,300;0,400;0,500;1,400&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+  <header>
+    <h1>PinkGames</h1>
+  </header>
+
+  <main>
+    <div class="row">
+      <div class="col-3 col-s-3 menu">
+        <div class="list">
+          <h2>Current Game</h2>
+        <ul>
+          <li>HangMan</li>
+        </ul>
+        </div>
+      </div>
+      <div class="col-6 col-s-9">
+        <div class="hangMan">
+          <img id="man" src="./hangman.png" alt="Ahorcado">
+        </div>
+        <div class="state1">
+          <span>X</span>
+          <span>i</span>
+          <span>m</span>
+          <span>e</span>
+          <span>n</span>
+          <span>a</span>
+        </div>
+        <div class="state2">
+          <span>X</span>
+          <span>i</span>
+          <span>m</span>
+          <span>e</span>
+          <span>n</span>
+          <span>a</span>
+        </div>
+        <div class="gameBox">
+          <form class="botones" action="javascript:void(0)">
+            <input type="button" value="New Game">
+            <input type="button" value="Give Up">
+          </form>
+        </div>
+      </div>
+      <div class="col-3 col-s-12">
+        <div class="aside">
+          <h2>Hang Man Game</h2>
+          <p>A guessing game</p>
+          <h2>Guide</h2>
+          <p>Try to guess the letters of a word</p>
+          <h2>Controls</h2>
+          <p>Use the keyboard ant the cursor</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>PinkGames</p>
+  </footer>
+  <script src="./index.js"></script>
+</body>
+</html>
