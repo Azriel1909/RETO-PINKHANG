@@ -12,7 +12,8 @@
     'BACKEND',
     'DOCKER',
     'TROYANO',
-    'RANSOMWARE'
+    'RANSOMWARE',
+    'TOLEDO'
   ]
 
   // Configuración actuales de variables a almacenar 
