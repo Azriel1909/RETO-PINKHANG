@@ -1,9 +1,9 @@
 ;(function(){
   'use strict'
   var game = {
-    word: 'XIMENA',
-    stateNum: 7,
-    state1:['X','E','A'],
+    word: 'HOLA',
+    stateNum: 4,
+    state1:['L','A'],
     state2:['C','J','P','O']
   }
 
@@ -28,7 +28,7 @@
     for(let letter of word) {
       let $span = document.createElement('span')
       let $txt = document.createTextNode('')
-      if ((state1 === letter) >= 0){
+      if (state1.indexOf(letter) >= 0) {
         // Si la palabra se adivinó, la mostramos.
         $txt.nodeValue = letter
       }
