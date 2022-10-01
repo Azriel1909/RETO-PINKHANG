@@ -77,9 +77,10 @@ footer {
   color: var(--bc-LightPrimary);
   font-size: 19px;
   text-align: center;
-  bottom: 0;
   width: 100%;
-  padding: 19px;
+  display: block;
+  padding: 1rem;
+  bottom: 0;
 }
 
 /* Mobiles */
@@ -100,7 +101,6 @@ footer {
 }
 
 .hangMan {
-  height: 30vh;
   padding: 30px;
 }
 
@@ -110,6 +110,7 @@ footer {
   padding: 10px;
   text-transform: uppercase;
   border: 0px var(--bc-blackPrimary);
+  border-radius: 4px ;
 }
 
 .gameBox input:hover {
@@ -120,7 +121,8 @@ footer {
 }
 
 .state1, .state2 {
-  padding: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .state1 span {
@@ -129,6 +131,8 @@ footer {
   box-shadow: 5px 10px;
 }
 
+
+
 .state2 span {
   padding: 10px;
   background-color: var(--bc-blackPrimary);
@@ -136,7 +140,7 @@ footer {
 }
 
 /* Tablets */
-@media only screen and (min-width:600px) {
+@media only screen and (min-width: 760px) {
   .col-s-1 {width: 8.33%;}
   .col-s-2 {width: 16.66%;}
   .col-s-3 {width: 25%;}
@@ -149,6 +153,7 @@ footer {
   .col-s-10 {width: 83.33%;}
   .col-s-11 {width: 91.66%;}
   .col-s-12 {width: 100%;}
+
 }
 
 /* desktop */
@@ -165,7 +170,18 @@ footer {
   .col-10 {width: 83.33%;}
   .col-11 {width: 91.66%;}
   .col-12 {width: 100%;}
-  footer {
-    position: fixed;
-  }
 }
+
+/* @media only screen and (min-width: 200px) {
+  .state1, .state2 {
+    font-size: small;
+  }
+  .gameBox input {
+    font-weight: bold;
+    font-size: 15px;
+    background-color: var(--bc-secondary);
+    padding: 8px;
+    text-transform: uppercase;
+    border: 0px var(--bc-blackPrimary);
+  }
+}  */
