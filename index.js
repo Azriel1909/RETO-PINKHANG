@@ -1,13 +1,24 @@
 ;(function(){
   'use strict'
-  // Configuración
-  var game = {
-    word: 'ALURA',
-    stateNum: 7,
-    state1:['A','L'],
-    state2:['C','J','P','O']
-  }
 
+  var words = [
+    'ALURA',
+    'XIMENA',
+    'MANZANA',
+    'HACKER',
+    'PROGRAMAR',
+    'ORACLE',
+    'FRONTEND',
+    'BACKEND',
+    'DOCKER',
+    'TROYANO',
+    'RANSOMWARE'
+  ]
+
+  // Configuración actuales de variables a almacenar 
+  var game = null
+  // Identificar alertas
+  var ended = false
   var $html = {
     man: document.getElementById('man'),
     // Se adivinó
@@ -98,7 +109,46 @@
       return
     }
     guessGame(game, letter)
+    var stateNum = game.stateNum
+    if (stateNum === 8 && !ended) {
+      setTimeout(showMessWin, 500)
+      ended = true
+    }
+    if (stateNum === 1 && !ended) {
+      let word = game.word 
+      let nFn = showMessLost.bind(undefined, word)
+      setTimeout(nFn, 500)
+      ended = true
+    }
     drawGame(game)
   }
-  drawGame(game)
+
+  function showMessWin() {
+    alert('YOU WIN!')
+  }
+
+  function showMessLost(word) {
+    alert('YOU LOST! IT WAS...' + word)
+  }
+  
+  window.newGame = function newGame() {
+    var word = randomWord()
+    game = {}
+      game.word = word
+      game.stateNum = 7
+      game.state1 = []
+      game.state2 = []
+      ended = false
+      drawGame(game)
+      console.log(game)
+  }
+
+  function randomWord() {
+    var index = ~~(Math.random() * words.length)
+    return words[index]
+  }
+
+  newGame()
+
 }())
+
